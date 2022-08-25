@@ -4,5 +4,9 @@
     {
         public string Sigla { get; set; }
         public string Nome { get; set; }
+
+        public UF()
+        {
+        }
     }
 }

@@ -8,5 +8,11 @@
         public string EntregaResultado { get; set; }
         public double ValorExame { get; set; }
 
+        public ExamePedidoExame()
+        {
+
+        }
     }
+
+  
 }

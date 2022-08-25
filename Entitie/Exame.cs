@@ -6,5 +6,10 @@
         public int Descricao { get; set; }
         public double Valor { get; set; }
 
+        public Exame()
+        {
+
+        }
+
     }
 }
