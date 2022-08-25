@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "O6beQ02G+iNRhVkGbRIFNDuFvppUxQzaEhH1NAvxLFc=",
+  "Source": "LabClinic",
+  "BasePath": "_content/LabClinic",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -11,13 +11,14 @@
         {
 
         }
-        public Convenio AddConvenio(string nome)
-        {
-            var convenio = new Convenio();
-            convenio.SetNome(nome);
+        /* public Convenio AddConvenio(string nome)
+         {
+             var convenio = new Convenio();
+             convenio.SetNome(nome);
 
-            Convenios.Add(convenio);
-            return convenio;
+             Convenios.Add(convenio);
+             return convenio;
 
-        }
+         }*/
+    }
 }

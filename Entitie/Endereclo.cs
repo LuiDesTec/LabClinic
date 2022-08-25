@@ -1,6 +1,6 @@
 ﻿namespace LabClinic.Entitie
 {
-    public class Endereclo
+    public class Endereco
     {
         public string Rua { get; set; }
         public string Numero { get; set; }

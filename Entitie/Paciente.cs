@@ -1,12 +1,9 @@
 ﻿namespace LabClinic.Entitie;
 
-public class Class
-{
-    class Paciente
+
+
+    public class Paciente
     {
-
-
-
         public int Codigo { get; private set; }
         public string Nome { get; set; }
         public Endereco Endereco { get; set; }
@@ -37,4 +34,3 @@ public class Class
 
 
     }
-}

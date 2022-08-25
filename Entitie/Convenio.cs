@@ -9,14 +9,5 @@
         {
 
         }
-        public void SetNome(string nome)
-        {
-
-            Nome = nome;
-        }
-
-        public int Codigo { get; set; }
-        public string Nome { get; set; }
-
     }
 }
