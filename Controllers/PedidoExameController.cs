@@ -1,7 +1,6 @@
 ﻿using LabClinic.Entitie;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Xml.Linq;
+
 
 namespace LabClinic.Controllers
 {
@@ -10,7 +9,7 @@ namespace LabClinic.Controllers
     public class PedidoExameController : ControllerBase
 
     {
-        private List<Exame> exames = new List<Exame>()
+        private static List<Exame> exames = new List<Exame>()
         {
                 new Exame()
                 {
@@ -47,7 +46,34 @@ namespace LabClinic.Controllers
             }
             return Ok(exame);
         }
+        [HttpPost]
+        [Route("AdcionarExame")]
+        public async Task<IActionResult> AddExame(Exame  request)
+        {
+            exames.Add(request);
+            return Ok(exames);
+        }
+        [HttpPut]
+        [Route("AlterarExame")]
+        public async Task<IActionResult> AtualizarExame(Exame request)
+        {
+            var exame = exames.Find(c => c.Codigo == request.Codigo);
+            if (exame == null)
+               return BadRequest("Não foi encontrar nenhum Exame!");
+            exame.Descricao = request.Descricao;
+            exame.Valor = request.Valor;
+            return Ok(exames);
+        }
 
-
+        [HttpDelete]
+        [Route("RemoverExame")]
+        public async Task<IActionResult> RemoverExame(int codigo)
+        {
+            var exame = exames.Find(c => c.Codigo == codigo);
+            if (exame == null)
+                return BadRequest("Não foi encontrar nenhum Exame!");
+            exames.Remove(exame);
+            return Ok(exames);
+        }
     }
 }
