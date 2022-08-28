@@ -1,6 +1,6 @@
 ﻿namespace LabClinic.Entitie
 {
-    public class ExamePedidoExame
+    public class CronogramaPedidoExame
     {
         public DateTime DataRealizacao { get; set; }
         public DateTime HorarioRealizacao { set; get; }
@@ -8,7 +8,7 @@
         public DateTime EntregaResultado { get; set; }
        
 
-        public ExamePedidoExame()
+        public CronogramaPedidoExame()
         {
 
         }

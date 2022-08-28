@@ -1,6 +1,6 @@
 ﻿namespace LabClinic.Entitie
 {
-    public class PedidoDeExame
+    public class PedidoDeExame : IIprimir
     {
         public int Codigo { get; private set; }
         public TipoDeRequisicao Tipo { get; private set; }
@@ -19,6 +19,16 @@
             Medico = medico;
             Paciente = paciente;
             ValorExame = valorExame;
+        }
+
+        public void GetImprimir()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SetCadastrar()
+        {
+            throw new NotImplementedException();
         }
     }
 }
