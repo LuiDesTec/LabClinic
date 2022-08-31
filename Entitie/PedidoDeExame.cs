@@ -23,7 +23,8 @@
 
         public void GetImprimir()
         {
-            throw new NotImplementedException();
+           
+            
         }
 
         public void SetCadastrar()
