@@ -20,12 +20,9 @@
         : base(nome, email, telefone)
         
         {
-        Nome = nome;
-        Email = email;
-        Telefone = telefone;
-        Codigo = codigo;
-        this.Endereco = Endereco;
-        this.DataNascimento = DataNascimento;
+            this.Codigo = codigo;
+            this.Endereco = Endereco;
+            this.DataNascimento = DataNascimento;
 
 
         }

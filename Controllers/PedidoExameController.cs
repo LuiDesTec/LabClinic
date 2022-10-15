@@ -46,13 +46,15 @@ namespace LabClinic.Controllers
             }
             return Ok(exame);
         }
+        
         [HttpPost]
         [Route("AdcionarExame")]
-        public async Task<IActionResult> AddExame(Exame  request)
+        public async Task<IActionResult> AddExame(Exame request)
         {
             exames.Add(request);
             return Ok(exames);
         }
+        
         [HttpPut]
         [Route("AlterarExame")]
         public async Task<IActionResult> AtualizarExame(Exame request)
