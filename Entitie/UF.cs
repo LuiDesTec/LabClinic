@@ -1,11 +1,12 @@
 ﻿namespace LabClinic.Entitie
 {
-    public class UF
+    public class Uf
     {
+        public int Id { get; set; }
         public string Sigla { get; set; }
         public string Nome { get; set; }
 
-        public UF()
+        public Uf()
         {
         }
     }

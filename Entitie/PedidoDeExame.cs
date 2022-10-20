@@ -1,7 +1,9 @@
 ﻿namespace LabClinic.Entitie
-{
+{   
+
     public class PedidoDeExame : IIprimir
     {
+        public int Id { get; set; }
         public int Codigo { get; private set; }
         public TipoDeRequisicao Tipo { get; private set; }
         public Medico Medico { get; private set; }

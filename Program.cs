@@ -1,4 +1,8 @@
+using LabClinic.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddSqlServer<ConexãoDBContext>(
+    builder.Configuration["ConnectionString:IWantDb"]);
 
 // Add services to the container.
 

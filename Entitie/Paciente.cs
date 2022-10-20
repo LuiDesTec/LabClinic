@@ -4,6 +4,7 @@
 
     public class Paciente : Contato
     {
+        public int Id { get; set; }
         public int Codigo { get; private set; }
         
         public Endereco Endereco { get; set; }

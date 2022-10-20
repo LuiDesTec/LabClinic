@@ -2,12 +2,13 @@
 {
     public class Endereco
     {
+        public int Id { get; set; }
         public string Rua { get; set; }
         public string Numero { get; set; }
         public string Bairro { get; set; }
         public int CEP { get; set; }
         public Cidade Cidade { get; set; }
-        public UF Estado { get; set; }
+        public Uf Estado { get; set; }
 
         public Endereco()
         {

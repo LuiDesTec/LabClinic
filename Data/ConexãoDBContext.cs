@@ -1,7 +1,6 @@
 ﻿using LabClinic.Entitie;
-using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure.Internal;
+
 
 namespace LabClinic.Data
 {
@@ -9,11 +8,24 @@ namespace LabClinic.Data
     {
         public DbSet<Paciente> Pacientes { get; set; }
         public DbSet<Convenio> Convenios { get; set; }
-        public DbSet<Medico> Medico { get; set; }
+        public DbSet<Medico> Medicos { get; set; }
         public DbSet<Exame> Exames { get; set; }
+        
 
+        public ConexãoDBContext(DbContextOptions<ConexãoDBContext> options) : base(options)
+        {
 
-     
+        }
+
+       protected  override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Paciente>()
+                .Property(p => p.Codigo).IsRequired();
+            modelBuilder.Entity<Paciente>()
+                .Property(p => p.DataNascimento).IsRequired();
+           
+        }
 
     }
 }

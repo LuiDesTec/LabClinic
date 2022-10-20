@@ -2,12 +2,18 @@
 {
     public class Medico
     {
-        public CRM CRM { get; set; }
+        public int Id   { get; set; }
+        public Crm Crm { get; set; }
         public string Nome { get; set; }
 
-        public Medico(CRM crm, string nome)
+        public Medico()
         {
-            CRM = crm;
+
+        }
+
+        public Medico(Crm crm, string nome)
+        {
+            Crm = crm;
             Nome = nome;
         }
     }
