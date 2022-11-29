@@ -2,8 +2,7 @@
 {
     interface IIprimir
     {
-        void GetImprimir();
         void SetCadastrar();
-
+        void GetImprimir();
     }
 }

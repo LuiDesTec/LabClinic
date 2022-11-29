@@ -1,7 +1,7 @@
 ﻿using LabClinic.Data;
 using LabClinic.Entitie;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace LabClinic.Controllers
 {
@@ -23,7 +23,9 @@ namespace LabClinic.Controllers
         public async Task<IActionResult> GetExame()
         {
 
-            return Ok(_dbContext);
+
+            await _dbContext.Exames.ToListAsync();
+            return Ok();
         }
 
         [HttpGet]
@@ -48,8 +50,7 @@ namespace LabClinic.Controllers
             
                 _dbContext.Exames.Add(request);
                 await _dbContext.SaveChangesAsync();
-                return Ok(_dbContext.Exames);
-                Created ($"Exame/{request.Id}", request.Id);
+                return Created ($"AdicionarExame/{request.Id}", request.Id);
 
 
 
@@ -69,13 +70,13 @@ namespace LabClinic.Controllers
        
         [HttpDelete]
         [Route("RemoverExame")]
-        public async Task<IActionResult> RemoverExame(int codigo)
+        public async Task<IActionResult> RemoverExame(int id)
         {
-            var exame = _dbContext.Exames.FirstOrDefault(c => c.Codigo== codigo);
+            var exame = _dbContext.Exames.FirstOrDefault(c => c.Id == id);
             if (exame == null)
                 return BadRequest("Não foi encontrar nenhum Exame!");
             _dbContext.Exames.Remove(exame);
-            return Ok(_dbContext.Exames);
+            return Ok();
         } 
     }
 

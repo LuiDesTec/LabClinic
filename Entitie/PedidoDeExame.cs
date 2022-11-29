@@ -1,4 +1,6 @@
-﻿namespace LabClinic.Entitie
+﻿using LabClinic.Entitie.Enums;
+
+namespace LabClinic.Entitie
 {   
 
     public class PedidoDeExame : IIprimir
@@ -9,29 +11,30 @@
         public Medico Medico { get; private set; }
         public Paciente Paciente { get; private set; }
         public double ValorExame { get; set; }
+        public StatusPedidoExame status { get; set; }
+        
         public PedidoDeExame()
         {
 
         }
-        public PedidoDeExame(int codigo, TipoDeRequisicao tipo, Medico medico, 
+        public PedidoDeExame(int id, int codigo, TipoDeRequisicao tipo, Medico medico, 
                              Paciente paciente, double valorExame)
         {
+            Id = id;
             Codigo = codigo;
             Tipo = tipo;
             Medico = medico;
             Paciente = paciente;
             ValorExame = valorExame;
         }
-
-        public void GetImprimir()
-        {
-            
-            
-        }
-
         public void SetCadastrar()
         {
             throw new NotImplementedException();
+        }
+        public void GetImprimir()
+        {
+
+
         }
     }
 }

@@ -1,14 +1,13 @@
 ﻿namespace LabClinic.Entitie
 {
-    public class Convenio
+    public class Convenio : Entidades
     {
         public int Id { get; set; }
-        public int Codigo { get;  set; }
-        public string Nome { get; set; }
+       
 
-        public Convenio()
+        public Convenio(int codigo, string nome, int id) : base(codigo, nome)
         {
-
+               Id = id;
         }
     }
 }

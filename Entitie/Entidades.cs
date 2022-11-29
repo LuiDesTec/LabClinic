@@ -2,7 +2,15 @@
 {
     public class Entidades
     {
-        public string Codigo { set; get; }
+        public int Codigo { set; get; }
         public string Nome { set; get; }
+
+
+        public Entidades (int nodigo, string nome)
+        {
+            Codigo = nodigo;
+            Nome = nome;
+        }
     }
+    
 }
